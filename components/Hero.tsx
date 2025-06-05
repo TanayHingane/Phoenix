@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <div className="bg-gradient-to-r from-pink-100 to-cyan-100 mt-24 gap-10 mb-4 rounded-2xl flex flex-col justify-center items-center h-[500]">
       <div className=" mb-2 mx-5 justify-center items-center flex flex-col">
-        <h1 className="text-4xl font-sans text-black font-stretch-condensed">
+        <h1 className="text-4xl font-sans font-light text-black font-stretch-condensed">
           Build Awesome Websites with
         </h1>
         <h1 className="text-4xl font-sans italic font-stretch-semi-condensed text-blue-500">
