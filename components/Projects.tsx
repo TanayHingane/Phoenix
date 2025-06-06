@@ -2,16 +2,11 @@
 // import lightSaasLandingPage from '@/assets/images/light-saas-landing-page.png';
 // import aiStartupLandingPage from '@/assets/images/ai-startup-landing-page.png';
 // import Image from "next/image";
-// import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 // import grainImage from "@/assets/images/grain.jpg";
 import SectionHead from "@/components/ui/SectionHead";
 import Card from "@/components/ui/Card";
-import {
-  ArrowRightIcon,
-  CodeXml,
-  CircleCheck,
-  CircleCheckBig,
-} from "lucide-react";
+import { ArrowRightIcon, CodeXml, CircleCheck } from "lucide-react";
+// import BgAnimateButton from "./ui/bg-animate-button";
 
 const portfolioProjects = [
   {
@@ -22,11 +17,10 @@ const portfolioProjects = [
       { title: "Comprehensive service showcase" },
       { title: "Seamless appointment booking" },
       { title: "Enhanced user engagement by 60%" },
-      // { title: 'Improved lead conversions' },
     ],
     link: "https://www.sunilbhor.com/",
     src: "https://github.com/Arsenic-01/SBA",
-    // image: darkSaasLandingPage,
+    // image: tpp.JPG,
   },
   {
     company: "K.K.Wagh Polytechnic",
@@ -102,6 +96,9 @@ export const Projects = () => {
                         <span>Live Site</span>
                         <ArrowRightIcon className="size-4 -rotate-45" />
                       </button>
+                      {/* <BgAnimateButton animation="spin-slow">
+                        Live Site
+                      </BgAnimateButton> */}
                     </a>
                     <a href={project.src} target="_blank">
                       <button className="bg-white text-gray-950 rounded-xl h-12 w-full md:w-auto px-5 font-semibold inline-flex items-center justify-center gap-2 md:mt-8">

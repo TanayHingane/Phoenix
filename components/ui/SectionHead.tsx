@@ -7,7 +7,7 @@ export default function SectionHeader({
 }) {
   return (
     <>
-      <h2 className="font-serif text-3xl md:text-5xl font-bold text-center mt-6 text-blue-500">
+      <h2 className="font-pre text-3xl md:text-5xl text-center mt-6 text-blue-500">
         {title}
       </h2>
       <p className="text-center md:text-lg lg:text-xl max-w-md mx-auto text-black mt-4">
