@@ -73,8 +73,8 @@ export const FloatingNav = ({
             href={navItem.link}
             className={cn("relative text-black items-center flex space-x-1")}
           >
-            <span className="block sm:hidden">{navItem.icon}</span>
-            <span className="hidden sm:block text-xs">{navItem.name}</span>
+            <span className="block sm:block ">{navItem.icon}</span>
+            <span className="text-xs">{navItem.name}</span>
           </a>
         ))}
       </motion.div>

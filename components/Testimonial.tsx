@@ -81,7 +81,7 @@ const ReviewCard = ({
 
 export function Testimonial() {
   return (
-    <div className="relative flex w-full flex-col items-center justify-center overflow-hidden my-12 -mt-2">
+    <div className="mx-auto relative flex w-full flex-col items-center justify-center overflow-hidden my-12 -mt-2">
       <div className="flex w-full flex-col items-center justify-center pb-10">
         <SectionHeader
           title="Work Review"

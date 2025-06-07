@@ -8,6 +8,7 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import { FloatingNav } from "@/components/ui/Navbar";
+import { FileText, Home, Info } from "lucide-react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,11 +41,14 @@ const eduAUVICWAPre = Edu_AU_VIC_WA_NT_Pre({
 export const metadata: Metadata = {
   title: "Tanay Hingane",
   description: "Tanay Hingane's Portfolio",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 const navItems = [
   { name: "Home", link: "/" },
-  { name: "About", link: "/" },
+  { name: "About", link: "/about" },
   { name: "Resume", link: "/" },
 ];
 
@@ -56,12 +60,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Hand:wght@400..700&display=swap"
-          rel="stylesheet"
-        />
+        <link rel="icon" href="/favicon.ico" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${eduAUVICWA.variable} ${eduAUVICWAPre.variable} antialiased`}

@@ -6,7 +6,7 @@
 import SectionHead from "@/components/ui/SectionHead";
 import Card from "@/components/ui/Card";
 import { ArrowRightIcon, CodeXml, CircleCheck } from "lucide-react";
-// import BgAnimateButton from "./ui/bg-animate-button";
+import BgAnimateButton from "./ui/bg-animate-button";
 
 const portfolioProjects = [
   {
@@ -70,7 +70,7 @@ export const Projects = () => {
             >
               <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                 <div className="lg:pb-16">
-                  <div className="bg-sky-400 text-transparent bg-clip-text inline-flex font-bold uppercase tracking-widest text-sm gap-2">
+                  <div className="bg-sky-400 text-transparent bg-clip-text inline-flex font-poppins uppercase tracking-widest text-sm gap-2">
                     <span>{project.company}</span>
                     <span>&bull;</span>
                     <span>{project.year}</span>
@@ -90,21 +90,42 @@ export const Projects = () => {
                       </li>
                     ))}
                   </ul>
-                  <div className="flex flex-col md:flex-row gap-3 w-full">
+                  <div className="flex flex-col md:flex-row gap-3 w-full text-white">
                     <a href={project.link} target="_blank">
-                      <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-5 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
+                      {/* <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-5 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
                         <span>Live Site</span>
                         <ArrowRightIcon className="size-4 -rotate-45" />
-                      </button>
-                      {/* <BgAnimateButton animation="spin-slow">
-                        Live Site
-                      </BgAnimateButton> */}
+                      </button> */}
+                      <BgAnimateButton
+                        animation="spin-fast"
+                        className="text-white font-semibold  items-center justify-center gap-2 mt-8"
+                        rounded="xl"
+                        variant="secondary"
+                        gradient="ocean"
+                      >
+                        <span className="inline-flex">
+                          Live Site
+                          <ArrowRightIcon className="size-3 -rotate-45" />
+                        </span>
+                      </BgAnimateButton>
                     </a>
                     <a href={project.src} target="_blank">
-                      <button className="bg-white text-gray-950 rounded-xl h-12 w-full md:w-auto px-5 font-semibold inline-flex items-center justify-center gap-2 md:mt-8">
+                      {/* <button className="bg-white text-gray-950 rounded-xl h-12 w-full md:w-auto px-5 font-semibold inline-flex items-center justify-center gap-2 md:mt-8">
                         <span>Code</span>
                         <CodeXml className="size-4" />
-                      </button>
+                      </button> */}
+                      <BgAnimateButton
+                        animation="spin-fast"
+                        className="text-white font-semibold items-center justify-center gap-2 mt-8"
+                        rounded="xl"
+                        variant="secondary"
+                        gradient="ocean"
+                      >
+                        <span className="inline-flex">
+                          Code
+                          <CodeXml className="size-4" />
+                        </span>
+                      </BgAnimateButton>
                     </a>
                   </div>
                 </div>
