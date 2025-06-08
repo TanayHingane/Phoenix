@@ -20,7 +20,7 @@ export const Footer = () => {
         <div className="border-t border-gray-200 dark:border-gray-800 py-6 text-sm flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="text-neutral-700 ">
             <a
-              href="https://www.linkedin.com/in/vedant-bhor-39287828b/"
+              href="https://www.linkedin.com/in/tanayhingane/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1 hover:underline text-base font-pre"

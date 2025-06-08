@@ -71,3 +71,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+//mantine mage react-together

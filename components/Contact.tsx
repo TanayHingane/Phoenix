@@ -1,13 +1,9 @@
-import { cn } from "@/lib/utils";
 import React from "react";
 import { BentoGrid, BentoGridItem } from "@/components/ui/Bento_Grid";
-import {
-  IconClipboardCopy,
-  IconFileBroken,
-  IconSignature,
-  IconTableColumn,
-} from "@tabler/icons-react";
 import { Footer } from "./ui/Footer";
+import ChatCard from "./ui/ChatCard";
+import TweetCard from "./ui/TweetCard";
+import LInCard from "./ui/LinkedInCard";
 
 export function Contacts() {
   return (
@@ -16,11 +12,8 @@ export function Contacts() {
         {items.map((item, i) => (
           <BentoGridItem
             key={i}
-            title={item.title}
-            description={item.description}
             header={item.header}
             className={item.className}
-            icon={item.icon}
           />
         ))}
       </BentoGrid>
@@ -35,24 +28,24 @@ const Skeleton = () => (
 );
 const items = [
   {
-    title: "The Dawn of Innovation",
-    description: "Explore the birth of groundbreaking ideas and inventions.",
-    header: <Skeleton />,
+    // title: "The Dawn of Innovation",
+    // description: "Explore the birth of groundbreaking ideas and inventions.",
+    header: <ChatCard />,
     className: "md:col-span-2",
-    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
+    // icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "The Digital Revolution",
-    description: "Dive into the transformative power of technology.",
-    header: <Skeleton />,
+    // title: "The Digital Revolution",
+    // description: "Dive into the transformative power of technology.",
+    header: <LInCard />,
     className: "md:col-span-1",
-    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+    // icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "The Art of Design",
-    description: "Discover the beauty of thoughtful and functional design.",
-    header: <Skeleton />,
+    // title: "The Art of Design",
+    // description: "Discover the beauty of thoughtful and functional design.",
+    header: <TweetCard />,
     className: "md:col-span-1",
-    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+    // icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
   },
 ];

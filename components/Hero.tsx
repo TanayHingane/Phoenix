@@ -3,7 +3,7 @@ import React from "react";
 const Hero = () => {
   return (
     <div className="flex flex-col justify-center items-center">
-      <div className="bg-gradient-to-r from-pink-100 to-cyan-100 mt-24 gap-10 mb-4 rounded-2xl flex flex-col justify-center items-center h-[500px] max-w-[1000] max-h-[500px] min-h-[500px] min-w-[1000] ">
+      <div className="bg-gradient-to-r from-pink-100 to-cyan-100 mt-24 gap-10 mb-4 rounded-2xl flex flex-col justify-center items-center h-[500px] max-w-[1000] max-h-[500px] lg:min-w-[1000px] xl:min-w-[1200px]">
         <div className=" mb-2 mx-5 justify-center items-center flex flex-col">
           <h1 className="text-4xl font-sans font-light text-black font-stretch-condensed">
             Build Awesome Websites with
