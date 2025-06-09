@@ -1,8 +1,12 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import SectionHeader from "./SectionHead";
+import CustomCursor from "./CustomCursor";
 
 const Board = () => {
+  const [cursorVisible, setCursorVisible] = useState(false);
+  const [cursorText, setCursorText] = useState("");
+
   const items = [
     {
       type: "text",
@@ -19,8 +23,10 @@ const Board = () => {
   ];
 
   return (
-    <div className="px-4 md:-mt-40 max-w-2xl mx-4 md:mx-auto">
+    <div className="relative px-4 md:-mt-40 max-w-2xl mx-4 md:mx-auto">
       <SectionHeader title="My Clicks" description="Watch my clicks :)" />
+      <CustomCursor visible={cursorVisible} text={cursorText} />
+
       <div className="columns-2 sm:columns-2 md:columns-3 lg:columns-3 gap-4 mt-14">
         {items.map((item, index) => (
           <div key={index} className="mb-4 break-inside-avoid">
@@ -38,15 +44,28 @@ const Board = () => {
                 src={item.src}
                 alt={`Image ${index}`}
                 className="w-full rounded-lg shadow"
+                onMouseEnter={() => {
+                  setCursorText(item.text);
+                  setCursorVisible(true);
+                }}
+                onMouseLeave={() => {
+                  setCursorVisible(false);
+                }}
               />
             ) : (
               <video
                 className="w-full rounded-lg shadow"
-                // controls
                 autoPlay
                 loop
                 muted
                 playsInline
+                onMouseEnter={() => {
+                  setCursorText(item.text);
+                  setCursorVisible(true);
+                }}
+                onMouseLeave={() => {
+                  setCursorVisible(false);
+                }}
               >
                 <source src={item.src} type="video/mp4" />
                 Your browser does not support the video tag.
