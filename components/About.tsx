@@ -1,12 +1,6 @@
-import { cn } from "@/lib/utils";
 import React from "react";
-import { BentoGrid, BentoGridItem } from "@/components/ui/Bento_Grid";
-import {
-  IconClipboardCopy,
-  IconFileBroken,
-  IconSignature,
-  IconTableColumn,
-} from "@tabler/icons-react";
+import { BentoGrid, BentoGridItem } from "@/components/ui/About_Grid";
+import { Command } from "lucide-react";
 
 export function About() {
   return (
@@ -16,7 +10,9 @@ export function About() {
           <BentoGridItem
             key={i}
             title={item.title}
-            description={item.description}
+            description1={item.description1}
+            description2={item.description2}
+            description3={item.description3}
             header={item.header}
             className={item.className}
             icon={item.icon}
@@ -31,7 +27,6 @@ const Skeleton = () => (
 );
 const items = [
   {
-    title: "Tanay Hingane",
     header: (
       <img
         src={"/tpp.jpg"}
@@ -41,16 +36,19 @@ const items = [
     className: "md:col-span-1 md:row-span-2 h-[500px]",
   },
   {
-    title: "The Digital Revolution",
-    description: "Dive into the transformative power of technology.",
-    header: <Skeleton />,
-    className: "md:col-span-1 md:row-span-1 h-[300px]",
-    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+    title: "I'm Tanay Hingane",
+    description1: "I am a web developer and designer.",
+    description2:
+      "I create innovative and user-friendly web experiences using the latest technologies( like Next.js, React.js, TailwindCSS). I am passionate about crafting digital solutions that not only look great but also provide exceptional user experiences.",
+    description3: "Let's work together. I'm always open to new opportunities!",
+    // header: <Skeleton />,
+    className: "md:col-span-1 md:row-span-1 h-[280px] border md:mt-4",
+    icon: "Hello,",
   },
   {
-    title: "The Art of Design",
-    description: "Discover the beauty of thoughtful and functional design.",
-    className: "md:col-span-1 md:row-span-1 h-[160px] ",
-    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+    title: "Recent Activity",
+    description1: "Currently getting training on ML using Python in R3 System.",
+    className: "md:col-span-1 md:row-span-1 h-[127px] md:-mt-6 border",
+    icon: <Command className="h-4 w-4 text-neutral-500" />,
   },
 ];

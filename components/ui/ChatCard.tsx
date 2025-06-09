@@ -20,7 +20,7 @@ export default function ChatCard() {
           <p className="text-sm text-gray-500 font-semibold mb-1">
             Tanay Hingane
           </p>
-          <div className="bg-gray-200 rounded-bl-[30px] rounded-r-[30px] px-6 py-2 text-sm text-black max-w-xs">
+          <div className="bg-gray-200 rounded-bl-[30px] rounded-r-[30px] px-4 py-2 text-sm text-black max-w-xs">
             want to work together? just send me a mail! I will be happy to help
             🤩
           </div>

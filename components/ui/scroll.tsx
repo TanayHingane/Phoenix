@@ -1,3 +1,5 @@
+"use client";
+import { useEffect, useState } from "react";
 import SectionHeader from "./SectionHead";
 
 const Board = () => {
@@ -7,66 +9,48 @@ const Board = () => {
       content:
         "My Love for travel\nI’m a good designer & a good observer. When I travel, I explore the world, gain new experiences, and document.",
     },
-
-    {
-      type: "image",
-      src: "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80",
-    },
-    {
-      type: "image",
-      src: "https://images.unsplash.com/photo-1554080353-a576cf803bda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80",
-    },
-    {
-      type: "image",
-      src: "https://images.unsplash.com/photo-1505144808419-1957a94ca61e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3070&q=80",
-    },
-    {
-      type: "image",
-      src: "https://images.unsplash.com/photo-1554080353-a576cf803bda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80",
-    },
-    {
-      type: "image",
-      src: "https://images.unsplash.com/photo-1505144808419-1957a94ca61e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3070&q=80",
-    },
-    {
-      type: "image",
-      src: "https://images.unsplash.com/photo-1554080353-a576cf803bda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80",
-    },
-    {
-      type: "image",
-      src: "https://images.unsplash.com/photo-1505144808419-1957a94ca61e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3070&q=80",
-    },
-    {
-      type: "image",
-      src: "https://images.unsplash.com/photo-1554080353-a576cf803bda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80",
-    },
-    {
-      type: "image",
-      src: "https://images.unsplash.com/photo-1505144808419-1957a94ca61e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3070&q=80",
-    },
+    { type: "image", src: "/clicks/c1.jpg", text: "Shegoan, Maharashtra" },
+    { type: "image", src: "/clicks/c2.jpg", text: "Aundh, Maharashtra" },
+    { type: "video", src: "/clicks/c3.mp4", text: "Lonavala, Maharashtra" },
+    { type: "video", src: "/clicks/c4.mp4", text: "Ashoka Adventure, Nashik" },
+    { type: "image", src: "/clicks/c5.jpg", text: "Solapur, Maharashtra" },
+    { type: "video", src: "/clicks/c7.mp4", text: "Karad, Maharashtra" },
+    { type: "image", src: "/clicks/c8.jpg", text: "KKWP, Nashik" },
   ];
 
   return (
-    <div className="p-4 -mt-36 max-w-2xl mx-4 md:mx-auto">
+    <div className="px-4 md:-mt-40 max-w-2xl mx-4 md:mx-auto">
       <SectionHeader title="My Clicks" description="Watch my clicks :)" />
       <div className="columns-2 sm:columns-2 md:columns-3 lg:columns-3 gap-4 mt-14">
         {items.map((item, index) => (
           <div key={index} className="mb-4 break-inside-avoid">
             {item.type === "text" ? (
-              <div className="bg-white p-4 rounded-lg shadow">
+              <div className="bg-gray-50 border border-gray-200 p-4 rounded-lg shadow">
                 <p className="text-lg font-semibold text-blue-600">
                   {item.content.split("\n")[0]}
                 </p>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-600 whitespace-pre-line">
                   {item.content.split("\n").slice(1).join("\n")}
                 </p>
               </div>
-            ) : (
+            ) : item.type === "image" ? (
               <img
                 src={item.src}
                 alt={`Image ${index}`}
                 className="w-full rounded-lg shadow"
               />
+            ) : (
+              <video
+                className="w-full rounded-lg shadow"
+                // controls
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                <source src={item.src} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             )}
           </div>
         ))}

@@ -8,7 +8,7 @@ export default function TweetCard() {
       <div className="flex justify-between items-start">
         <div className="font-lg">
           <p className="font-semibold text-gray-800">Tanay Hingane</p>
-          <p className="text-gray-500">hi@marco.fyi</p>
+          <p className="text-gray-500">t.hingane</p>
         </div>
         <div className="w-10 h-10 rounded-xl bg-blue-500 flex items-center justify-center">
           {/* Replace with your logo if needed */}

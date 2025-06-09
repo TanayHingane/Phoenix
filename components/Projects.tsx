@@ -1,7 +1,6 @@
 // import darkSaasLandingPage from '@/assets/images/dark-saas-landing-page.png';
 // import lightSaasLandingPage from '@/assets/images/light-saas-landing-page.png';
 // import aiStartupLandingPage from '@/assets/images/ai-startup-landing-page.png';
-// import Image from "next/image";
 // import grainImage from "@/assets/images/grain.jpg";
 import SectionHead from "@/components/ui/SectionHead";
 import Card from "@/components/ui/Card";
@@ -10,44 +9,44 @@ import BgAnimateButton from "./ui/bg-animate-button";
 
 const portfolioProjects = [
   {
-    company: "SBA Inc.",
+    company: "Hobby Project",
     year: "2024-25",
-    title: "Landing Page for Architectural Firm",
+    title: "Snake Game",
     results: [
-      { title: "Comprehensive service showcase" },
-      { title: "Seamless appointment booking" },
-      { title: "Enhanced user engagement by 60%" },
+      { title: "Fast and smooth game experience" },
+      { title: "Intuitive and engaging gameplay" },
+      { title: "Keyboard supported" },
     ],
-    link: "https://www.sunilbhor.com/",
-    src: "https://github.com/Arsenic-01/SBA",
-    // image: tpp.JPG,
-  },
-  {
-    company: "K.K.Wagh Polytechnic",
-    year: "2025",
-    title: "StudyStack",
-    results: [
-      { title: "Helped 300+ students access notes" },
-      { title: "Enabled seamless teacher uploads" },
-      { title: "Improved study efficiency for students" },
-    ],
-    link: "https://studystack01.vercel.app/",
-    src: "https://github.com/Arsenic-01/studystack",
-    // image: lightSaasLandingPage,
+    link: "https://snakegamevictus.pages.dev/",
+    src: "https://github.com/TanayHingane/snakegamevictus",
+    image: "/snake.png",
   },
   {
     company: "Hobby Project",
     year: "2025",
-    title: "Cloudgram",
+    title: "Portfolio",
     results: [
-      { title: "Unlimited 20MB file uploads" },
-      { title: "Fast 2GB uploads via S3" },
-      { title: "Secure Telegram integration" },
-      { title: "Scalable and user-friendly" },
+      { title: "Built with Next.js and Tailwind CSS" },
+      { title: "Fully responsive and mobile-friendly" },
+      { title: "Exceptional features and animations" },
     ],
-    link: "https://cloudgram-01.vercel.app/",
-    src: "https://github.com/Arsenic-01/cloudgram",
-    // image: aiStartupLandingPage,
+    link: "https://tanayhingane.vercel.app/",
+    src: "https://github.com/TanayHingane/Victus",
+    image: "/portfolio.png",
+  },
+  {
+    company: "Hobby Project",
+    year: "2025",
+    title: "SmartBalance",
+    results: [
+      { title: "Budget management made easy" },
+      { title: "Expenses tracking and analysis" },
+      { title: "Real-time updates and insights" },
+      { title: "Budget Reports with graphs" },
+    ],
+    link: "https://smartbalance03.vercel.app/",
+    src: "https://github.com/TanayHingane/SmartBalance",
+    image: "/smartbalance.png",
   },
 ];
 
@@ -130,11 +129,11 @@ export const Projects = () => {
                   </div>
                 </div>
                 <div>
-                  {/* <Image
+                  <img
                     src={project.image}
                     alt={project.title}
-                    className='mt-8 -mb-4 md:mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none'
-                  /> */}
+                    className="mt-8 -mb-4 md:mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none rounded-lg"
+                  />
                 </div>
               </div>
             </Card>
