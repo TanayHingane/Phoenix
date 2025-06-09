@@ -33,10 +33,10 @@ const Board = () => {
             {item.type === "text" ? (
               <div className="bg-gray-50 border border-gray-200 p-4 rounded-lg shadow">
                 <p className="text-lg font-semibold text-blue-600">
-                  {item.content.split("\n")[0]}
+                  {item.content?.split("\n")[0]}
                 </p>
                 <p className="text-sm text-gray-600 whitespace-pre-line">
-                  {item.content.split("\n").slice(1).join("\n")}
+                  {item.content?.split("\n").slice(1).join("\n")}
                 </p>
               </div>
             ) : item.type === "image" ? (
@@ -45,7 +45,7 @@ const Board = () => {
                 alt={`Image ${index}`}
                 className="w-full rounded-lg shadow"
                 onMouseEnter={() => {
-                  setCursorText(item.text);
+                  setCursorText(item.text!);
                   setCursorVisible(true);
                 }}
                 onMouseLeave={() => {
@@ -60,7 +60,7 @@ const Board = () => {
                 muted
                 playsInline
                 onMouseEnter={() => {
-                  setCursorText(item.text);
+                  setCursorText(item.text!);
                   setCursorVisible(true);
                 }}
                 onMouseLeave={() => {
