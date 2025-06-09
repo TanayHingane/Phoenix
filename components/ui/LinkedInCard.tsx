@@ -1,7 +1,10 @@
+"use client";
 import React from "react";
 import { ArrowRight, Linkedin } from "lucide-react";
+import useSound from "use-sound";
 
 export default function LInCard() {
+  const [play] = useSound("/Linked in.mp3", { volume: 0.5 });
   return (
     <div className="max-w-full h-full p-7 rounded-2xl bg-gray-50 shadow-sm border border-gray-200 text-sm font-sans space-y-4">
       {/* Header */}
@@ -28,10 +31,19 @@ export default function LInCard() {
       </div>
 
       {/* CTA Button */}
-      <button className="cursor-pointer w-full flex items-center justify-center border border-gray-300 py-2 rounded-full hover:bg-blue-500 hover:text-white transition">
-        <span className="text-sm font-medium">DM ME</span>
-        <ArrowRight className="w-4 h-4 ml-2" />
-      </button>
+      <a
+        href="https://www.linkedin.com/in/tanayhingane/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <button
+          className="cursor-pointer w-full flex items-center justify-center border border-gray-300 py-2 rounded-full hover:bg-blue-500 hover:text-white transition"
+          onMouseEnter={() => play()}
+        >
+          <span className="text-sm font-medium">DM ME</span>
+          <ArrowRight className="w-4 h-4 ml-2" />
+        </button>
+      </a>
     </div>
   );
 }
