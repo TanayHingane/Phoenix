@@ -58,7 +58,7 @@ export const Projects = () => {
           title="Portfolio Projects"
           description="Check out my portfolio projects"
         />
-        <div className="flex flex-col mt-10 md:mt-20 gap-20">
+        <div className="flex flex-col mt-10 md:mt-20 md:mx-15 gap-20">
           {portfolioProjects.map((project, projectIndex) => (
             <Card
               className="px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:px-20 lg:pt-16 sticky"
@@ -69,12 +69,12 @@ export const Projects = () => {
             >
               <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                 <div className="lg:pb-16">
-                  <div className="bg-sky-400 text-transparent bg-clip-text inline-flex font-poppins uppercase tracking-widest text-sm gap-2">
+                  <div className="bg-sky-400 text-transparent bg-clip-text inline-flex font-poppins uppercase tracking-widest text-sm md:text-base gap-2">
                     <span>{project.company}</span>
                     <span>&bull;</span>
                     <span>{project.year}</span>
                   </div>
-                  <h3 className="font-serif text-black text-2xl mt-2 md:text-4xl md:mt-4">
+                  <h3 className="font-serif text-black text-4xl mt-2 md:text-4xl md:mt-4">
                     {project.title}
                   </h3>
                   <hr className="border-t-2 border-gradient-to-r from-pink-100 to-cyan-100 mt-4 md:mt-5" />
@@ -91,13 +91,12 @@ export const Projects = () => {
                   </ul>
                   <div className="flex flex-col md:flex-row gap-3 w-full text-white">
                     <a href={project.link} target="_blank">
-                      {/* <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-5 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
+                      <button className="bg-gradient-to-r from-sky-400 to-emerald-400 text-white h-12 w-full md:w-auto px-5 rounded-xl font-semibold sm:hidden block items-center justify-center gap-2 mt-8">
                         <span>Live Site</span>
-                        <ArrowRightIcon className="size-4 -rotate-45" />
-                      </button> */}
+                      </button>
                       <BgAnimateButton
                         animation="spin-fast"
-                        className="text-white font-semibold  items-center justify-center gap-2 mt-8"
+                        className="text-white font-semibold hidden sm:block items-center justify-center gap-2 mt-8"
                         rounded="xl"
                         variant="secondary"
                         gradient="ocean"
@@ -109,13 +108,12 @@ export const Projects = () => {
                       </BgAnimateButton>
                     </a>
                     <a href={project.src} target="_blank">
-                      {/* <button className="bg-white text-gray-950 rounded-xl h-12 w-full md:w-auto px-5 font-semibold inline-flex items-center justify-center gap-2 md:mt-8">
+                      <button className="bg-gradient-to-r from-sky-400 to-emerald-400 text-white rounded-xl h-12 w-full md:w-auto px-5 font-semibold sm:hidden block items-center justify-center gap-2 md:mt-8">
                         <span>Code</span>
-                        <CodeXml className="size-4" />
-                      </button> */}
+                      </button>
                       <BgAnimateButton
                         animation="spin-fast"
-                        className="text-white font-semibold items-center justify-center gap-2 mt-8"
+                        className="text-white font-semibold hidden sm:block items-center justify-center gap-2 mt-8"
                         rounded="xl"
                         variant="secondary"
                         gradient="ocean"
@@ -132,7 +130,7 @@ export const Projects = () => {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="mt-8 -mb-4 md:mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none rounded-lg"
+                    className="mt-8 -mb-2 md:mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none rounded-lg"
                   />
                 </div>
               </div>

@@ -23,7 +23,7 @@ const Board = () => {
   ];
 
   return (
-    <div className="relative px-4 md:-mt-40 max-w-2xl mx-4 md:mx-auto">
+    <div className="relative px-4 md:-mt-28 max-w-2xl mx-4 md:mx-auto">
       <SectionHeader title="My Clicks" description="Watch my clicks :)" />
       <CustomCursor visible={cursorVisible} text={cursorText} />
 

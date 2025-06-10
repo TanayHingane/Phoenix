@@ -8,7 +8,6 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import { FloatingNav } from "@/components/ui/Navbar";
-import { FileText, Home, Info } from "lucide-react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

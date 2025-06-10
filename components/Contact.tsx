@@ -8,7 +8,7 @@ import LInCard from "./ui/LinkedInCard";
 export function Contacts() {
   return (
     <div className="mt-16 md:mt-24" id="contact">
-      <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem] my-7">
+      <BentoGrid className="max-w-7xl mx-auto md:auto-rows-[20rem] my-7">
         {items.map((item, i) => (
           <BentoGridItem
             key={i}
@@ -23,9 +23,7 @@ export function Contacts() {
     </div>
   );
 }
-const Skeleton = () => (
-  <div className="flex flex-1 w-full h-full min-h-[4rem] rounded-xl   dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)]  border border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black"></div>
-);
+
 const items = [
   {
     // title: "The Dawn of Innovation",

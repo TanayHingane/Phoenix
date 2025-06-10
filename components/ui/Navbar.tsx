@@ -62,10 +62,10 @@ export const FloatingNav = ({
         )}
       >
         {/* {logo} */}
-        <div className="fixed -left-12 w-10 h-10 rounded-full bg-white/70 backdrop-blur-3xl cursor-pointer border shadow flex items-center justify-center">
-          <a href="/">
-            <span className="text-blue-600 font-bold text-xl">त</span>
-          </a>
+        <div className="fixed flex -left-4 md:-left-14 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/90 md:bg-white/70 backdrop-blur-3xl cursor-pointer border shadow items-center justify-center">
+          {/* <a href="/"> */}
+          <span className="text-blue-600 font-bold text-sm md:text-2xl">त</span>
+          {/* </a> */}
         </div>
 
         {navItems.map((navItem: any, idx: number) => (
@@ -75,7 +75,7 @@ export const FloatingNav = ({
             className={cn("relative text-black items-center flex space-x-1")}
           >
             <span className="block sm:block ">{navItem.icon}</span>
-            <span className="text-xs">{navItem.name}</span>
+            <span className="text-xs md:text-base">{navItem.name}</span>
           </a>
         ))}
       </motion.div>

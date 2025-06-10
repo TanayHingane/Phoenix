@@ -9,7 +9,7 @@ export default function LInCard() {
     <div className="max-w-full h-full p-7 rounded-2xl bg-gray-50 shadow-sm border border-gray-200 text-sm font-sans space-y-4">
       {/* Header */}
       <div className="flex justify-between items-start">
-        <div className="font-lg">
+        <div className="font-3xl">
           <p className="font-semibold text-gray-800">Tanay Hingane</p>
           <p className="text-gray-500">tanayhingane</p>
         </div>

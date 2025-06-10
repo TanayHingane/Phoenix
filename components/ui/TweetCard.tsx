@@ -10,7 +10,7 @@ export default function TweetCard() {
     <div className="max-w-full h-full w-full p-7 rounded-2xl bg-gray-50 shadow-sm border border-gray-200 text-sm font-sans space-y-4">
       {/* Header */}
       <div className="flex justify-between items-start">
-        <div className="font-lg">
+        <div className="font-3xl">
           <p className="font-semibold text-gray-800">Victus03</p>
           <p className="text-gray-500">tanay.h03</p>
         </div>
