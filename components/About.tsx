@@ -29,7 +29,7 @@ const items = [
   {
     header: (
       <img
-        src={"/tpp.JPG"}
+        src={"/tpp.png"}
         className="object-cover w-full h-[90%] rounded-xl"
       ></img>
     ),

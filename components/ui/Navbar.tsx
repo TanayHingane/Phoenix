@@ -8,6 +8,7 @@ import {
 } from "motion/react";
 import { cn } from "@/lib/utils";
 import { ReactNode } from "react";
+import { useSound } from "use-sound";
 
 export const FloatingNav = ({
   navItems,
@@ -42,6 +43,7 @@ export const FloatingNav = ({
     }
   });
 
+  const [play] = useSound("/tanay.mp3", { volume: 0.5 });
   return (
     <AnimatePresence mode="wait">
       <motion.div
@@ -64,7 +66,12 @@ export const FloatingNav = ({
         {/* {logo} */}
         <div className="fixed flex -left-4 md:-left-14 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/90 md:bg-white/70 backdrop-blur-3xl cursor-pointer border shadow items-center justify-center">
           {/* <a href="/"> */}
-          <span className="text-blue-600 font-bold text-sm md:text-2xl">त</span>
+          <span
+            className="text-blue-600 font-bold text-sm md:text-2xl"
+            onClick={play}
+          >
+            त
+          </span>
           {/* </a> */}
         </div>
 

@@ -16,20 +16,26 @@ const Hero = () => {
         <div className="mt-3 mb-3 grid grid-cols-1 md:grid-cols-3 gap-7 mx-3 h-[190] hover:cursor-pointer">
           {/* 1stDiv */}
           <div className="bg-white hidden sm:block md:w-[220] md:h-[270] rounded-xl">
-            <NameCard />
+            <a href="#contact">
+              <NameCard />
+            </a>
           </div>
 
           {/* 2ndDiv */}
           <div className="shadow-md items-center justify-center w-[220] h-[270] rounded-xl">
-            <img
-              src={"tp.jpg"}
-              className="object-cover w-full h-full rounded-xl"
-            ></img>
+            <a href="/about">
+              <img
+                src={"tp.jpg"}
+                className="object-cover w-full h-full rounded-xl"
+              ></img>
+            </a>
           </div>
 
           {/* 3rdDiv */}
           <div className="bg-white hidden sm:block w-[220] h-[270] rounded-xl">
-            <ProjectCard />
+            <a href="#projects">
+              <ProjectCard />
+            </a>
           </div>
         </div>
       </div>
