@@ -68,7 +68,7 @@ export const FloatingNav = ({
           {/* <a href="/"> */}
           <span
             className="text-blue-600 font-bold text-sm md:text-2xl"
-            onClick={play}
+            onClick={() => play()}
           >
             त
           </span>
