@@ -30,6 +30,21 @@ html {
   scroll-behavior: smooth;
 }
 
+@layer utilities {
+  @keyframes moveLeft {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-moveLeft {
+    animation: moveLeft 40s linear infinite;
+  }
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {

@@ -1,105 +1,110 @@
-import { cn } from "@/lib/utils";
-import { Marquee } from "@/components/magicui/marquee";
-import SectionHeader from "./ui/SectionHead";
+"use client";
+import { useState } from "react";
+import SectionHeader from "@/components/ui/SectionHead";
+import Image from "next/image";
+import Card from "@/components/ui/Card";
+import { Fragment } from "react";
 
-const reviews = [
+const testimonials = [
   {
-    name: "Jack",
-    username: "@jack",
-    body: "I've never seen anything like this before. It's amazing. I love it.",
-    img: "https://avatar.vercel.sh/jack",
+    name: "Alex Turner",
+    position: "Marketing Manager @ TechStartups",
+    text: "Alex was instrumental in transforming our website into a powerful marketing tool. His attention to detail and ability to understand our brand is exceptional. We're thrilled with the results!",
+    avatar: "/avatars/memoji-avatar-1.png",
   },
   {
-    name: "Jill",
-    username: "@jill",
-    body: "I don't know what to say. I'm speechless. This is amazing.",
-    img: "https://avatar.vercel.sh/jill",
+    name: "Olivia Green",
+    position: "Head of Design @ GreenLeaf",
+    text: "Working with Alex was a pleasure. His expertise in frontend development brought our designs to life in a way we never imagined. The website has exceeded our expectations.",
+    avatar: "/avatars/memoji-avatar-2.png",
   },
   {
-    name: "John",
-    username: "@john",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/john",
+    name: "Daniel White",
+    position: "CEO @ InnovateCo",
+    text: "Alex's ability to create seamless user experiences is unmatched. Our website has seen a significant increase in conversions since launching the new design. We couldn't be happier.",
+    avatar: "/avatars/memoji-avatar-3.png",
   },
   {
-    name: "Jane",
-    username: "@jane",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/jane",
+    name: "Emily Carter",
+    position: "Product Manager @ GlobalTech",
+    text: "Alex is a true frontend wizard. He took our complex product and transformed it into an intuitive and engaging user interface. We're already seeing positive feedback from our customers.",
+    avatar: "/avatars/memoji-avatar-4.png",
   },
   {
-    name: "Jenny",
-    username: "@jenny",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/jenny",
-  },
-  {
-    name: "James",
-    username: "@james",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/james",
+    name: "Michael Brown",
+    position: "Director of IT @ MegaCorp",
+    text: "Alex's work on our website has been nothing short of exceptional. He's a talented developer who is also a great communicator. We highly recommend him.",
+    avatar: "/avatars/memoji-avatar-5.png",
   },
 ];
 
-const firstRow = reviews.slice(0, reviews.length / 2);
-const secondRow = reviews.slice(reviews.length / 2);
-
-const ReviewCard = ({
-  img,
-  name,
-  username,
-  body,
-}: {
-  img: string;
-  name: string;
-  username: string;
-  body: string;
-}) => {
+export const Testimonial = () => {
   return (
-    <figure
-      className={cn(
-        "relative h-full w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
-        // light styles
-        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
-        // dark styles
-        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
-      )}
-    >
-      <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={img} />
-        <div className="flex flex-col">
-          <figcaption className="text-sm font-medium dark:text-white">
-            {name}
-          </figcaption>
-          <p className="text-xs font-medium dark:text-white/40">{username}</p>
-        </div>
-      </div>
-      <blockquote className="mt-2 text-sm">{body}</blockquote>
-    </figure>
-  );
-};
-
-export function Testimonial() {
-  return (
-    <div className="mx-auto relative flex w-full flex-col items-center justify-center overflow-hidden my-12 -mt-2">
-      <div className="flex w-full flex-col items-center justify-center pb-10">
+    <section className="py-16 lg:py-16" id="testimonials">
+      <div className="container">
         <SectionHeader
           title="Work Review"
           description="See what people say about me"
         />
+
+        <div className="mt-12 lg:py-4 overflow-hidden relative">
+          <div className="flex gap-8 scroll-left w-max pr-8">
+            {Array.from({ length: 2 }).map((_, index) => (
+              <Fragment key={index}>
+                {testimonials.map((testimonial) => (
+                  <Card
+                    key={`${testimonial.name}-${index}`}
+                    className="max-w-xs p-6 md:p-8 md:max-w-md hover:-rotate-3 transition duration-300 hover:cursor-pointer"
+                  >
+                    <div className="flex gap-4 items-center">
+                      <div className="size-14 bg-gray-700 rounded-full inline-flex items-center justify-center flex-shrink-0">
+                        <Image
+                          src={testimonial.avatar}
+                          alt={testimonial.name}
+                          className="max-h-full select-none pointer-events-none"
+                          width={56}
+                          height={56}
+                        />
+                      </div>
+                      <div>
+                        <div className="font-semibold">{testimonial.name}</div>
+                        <div className="text-gray-500 text-sm">
+                          {testimonial.position}
+                        </div>
+                      </div>
+                    </div>
+                    <p className="mt-4 md:text-base md:mt-6">
+                      {testimonial.text}
+                    </p>
+                  </Card>
+                ))}
+              </Fragment>
+            ))}
+          </div>
+        </div>
       </div>
-      <Marquee pauseOnHover className="[--duration:20s]">
-        {firstRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
-        ))}
-      </Marquee>
-      <Marquee reverse pauseOnHover className="[--duration:20s]">
-        {secondRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
-        ))}
-      </Marquee>
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
-    </div>
+
+      {/* Animation CSS */}
+      <style jsx>{`
+        .scroll-left {
+          animation: scrollLeft 60s linear infinite;
+        }
+
+        @keyframes scrollLeft {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+
+        @media (hover: hover) {
+          .scroll-left:hover {
+            animation-play-state: paused;
+          }
+        }
+      `}</style>
+    </section>
   );
-}
+};

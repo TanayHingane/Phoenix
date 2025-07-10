@@ -1,6 +1,7 @@
 import React from "react";
 import { BentoGrid, BentoGridItem } from "@/components/ui/About_Grid";
 import { Command } from "lucide-react";
+import Image from "next/image";
 
 export function About() {
   return (
@@ -28,10 +29,13 @@ const Skeleton = () => (
 const items = [
   {
     header: (
-      <img
+      <Image
         src={"/tpp.png"}
+        alt="TPP"
         className="object-cover w-full h-[90%] rounded-xl"
-      ></img>
+        width={500}
+        height={500}
+      />
     ),
     className: "md:col-span-1 md:row-span-2 h-[500px] md:h-[600px]",
   },
