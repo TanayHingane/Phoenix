@@ -20,6 +20,8 @@ const Board = () => {
     { type: "image", src: "/clicks/c5.jpg", text: "Solapur, Maharashtra" },
     { type: "video", src: "/clicks/c7.mp4", text: "Karad, Maharashtra" },
     { type: "image", src: "/clicks/c8.jpg", text: "KKWP, Nashik" },
+    { type: "image", src: "/clicks/c9.jpg", text: "Kalaram Temple, Nashik" },
+    // { type: "image", src: "/clicks/c10.jpg", text: "Pune, Maharashtra" },
   ];
 
   return (

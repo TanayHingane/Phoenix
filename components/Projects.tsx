@@ -10,32 +10,6 @@ import BgAnimateButton from "./ui/bg-animate-button";
 const portfolioProjects = [
   {
     company: "Hobby Project",
-    year: "2024-25",
-    title: "Snake Game",
-    results: [
-      { title: "Fast and smooth game experience" },
-      { title: "Intuitive and engaging gameplay" },
-      { title: "Keyboard supported" },
-    ],
-    link: "https://snakegamevictus.pages.dev/",
-    src: "https://github.com/TanayHingane/snakegamevictus",
-    image: "/snake.png",
-  },
-  {
-    company: "Hobby Project",
-    year: "2025",
-    title: "Portfolio",
-    results: [
-      { title: "Built with Next.js and Tailwind CSS" },
-      { title: "Fully responsive and mobile-friendly" },
-      { title: "Exceptional features and animations" },
-    ],
-    link: "https://tanayhingane.vercel.app/",
-    src: "https://github.com/TanayHingane/Victus",
-    image: "/portfolio.png",
-  },
-  {
-    company: "Hobby Project",
     year: "2025",
     title: "SmartBalance",
     results: [
@@ -48,6 +22,46 @@ const portfolioProjects = [
     src: "https://github.com/TanayHingane/SmartBalance",
     image: "/smartbalance.png",
   },
+  {
+    company: "Hobby Project",
+    year: "2025",
+    title: "SafeBeam",
+    results: [
+      { title: "Transfer data safely" },
+      { title: "Receive data with otp" },
+      { title: "Data auto-delete after 10 mins" },
+      { title: "Works with any type of data" },
+    ],
+    link: "http://safebeam03.vercel.app/",
+    src: "https://github.com/TanayHingane/SafeBeam",
+    image: "/safebeam03.png",
+  },
+  {
+    company: "Hobby Project",
+    year: "2024",
+    title: "Snake Game",
+    results: [
+      { title: "Fast and smooth game experience" },
+      { title: "Intuitive and engaging gameplay" },
+      { title: "Keyboard supported" },
+    ],
+    link: "https://snakegamevictus.pages.dev/",
+    src: "https://github.com/TanayHingane/snakegamevictus",
+    image: "/snake.png",
+  },
+  // {
+  //   company: "Hobby Project",
+  //   year: "2025",
+  //   title: "Portfolio",
+  //   results: [
+  //     { title: "Built with Next.js and Tailwind CSS" },
+  //     { title: "Fully responsive and mobile-friendly" },
+  //     { title: "Exceptional features and animations" },
+  //   ],
+  //   link: "https://tanayhingane.vercel.app/",
+  //   src: "https://github.com/TanayHingane/Victus",
+  //   image: "/portfolio.png",
+  // },
 ];
 
 export const Projects = () => {
@@ -96,7 +110,7 @@ export const Projects = () => {
                       </button>
                       <BgAnimateButton
                         animation="spin-fast"
-                        className="text-white font-semibold hidden sm:block items-center justify-center gap-2 mt-8"
+                        className="text-white font-semibold hidden sm:block items-center justify-center gap-2 mt-8 cursor-pointer"
                         rounded="xl"
                         variant="secondary"
                         gradient="ocean"
@@ -113,7 +127,7 @@ export const Projects = () => {
                       </button>
                       <BgAnimateButton
                         animation="spin-fast"
-                        className="text-white font-semibold hidden sm:block items-center justify-center gap-2 mt-8"
+                        className="text-white font-semibold hidden sm:block items-center justify-center gap-2 mt-8 cursor-pointer"
                         rounded="xl"
                         variant="secondary"
                         gradient="ocean"
