@@ -1,7 +1,9 @@
+"use client";
 import { About } from "@/components/About";
 import { Footer } from "@/components/ui/Footer";
-import Board from "@/components/ui/scroll";
-import React from "react";
+import React, { Suspense } from "react";
+import dynamic from "next/dynamic";
+const Board = dynamic(() => import("@/components/ui/scroll"), { ssr: false });
 
 const page = () => {
   return (
@@ -9,7 +11,10 @@ const page = () => {
       <div className="my-24">
         <About />
       </div>
-      <Board />
+      <Suspense fallback={<div>Loading gallery...</div>}>
+        <Board />
+      </Suspense>
+
       <div className="p-5 px-5 md:px-44 bg-white">
         <div className="mt-16">
           <Footer />

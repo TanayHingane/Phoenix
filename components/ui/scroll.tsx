@@ -2,6 +2,7 @@
 import { useState } from "react";
 import SectionHeader from "./SectionHead";
 import CustomCursor from "./CustomCursor";
+import Image from "next/image";
 
 const Board = () => {
   const [cursorVisible, setCursorVisible] = useState(false);
@@ -42,10 +43,25 @@ const Board = () => {
                 </p>
               </div>
             ) : item.type === "image" ? (
-              <img
-                src={item.src}
+              // <img
+              //   src={item.src}
+              //   alt={`Image ${index}`}
+              //   className="w-full rounded-lg shadow"
+              //   onMouseEnter={() => {
+              //     setCursorText(item.text!);
+              //     setCursorVisible(true);
+              //   }}
+              //   onMouseLeave={() => {
+              //     setCursorVisible(false);
+              //   }}
+              // />
+              <Image
+                src={item.src!}
                 alt={`Image ${index}`}
+                width={400}
+                height={300}
                 className="w-full rounded-lg shadow"
+                loading="lazy"
                 onMouseEnter={() => {
                   setCursorText(item.text!);
                   setCursorVisible(true);
