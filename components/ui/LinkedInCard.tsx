@@ -6,7 +6,7 @@ import useSound from "use-sound";
 export default function LInCard() {
   const [play] = useSound("/Linked in.mp3", { volume: 0.5 });
   return (
-    <div className="max-w-full h-full p-7 rounded-2xl bg-gray-50 shadow-sm border border-gray-200 text-sm font-sans space-y-4">
+    <div className="pt-9 max-w-full h-full md:h-3/5 w-full p-7 rounded-2xl bg-gray-50 shadow-sm border border-gray-200 text-sm font-sans space-y-6">
       {/* Header */}
       <div className="flex justify-between items-start">
         <div className="font-3xl">
@@ -20,7 +20,7 @@ export default function LInCard() {
       </div>
 
       {/* Message Card */}
-      <div className="rounded-lg border-l-2 border-blue-400 bg-white p-3 my-10 space-y-3 shadow-sm">
+      {/* <div className="rounded-lg border-l-2 border-blue-400 bg-white p-3 my-10 space-y-3 shadow-sm">
         <a
           href="https://www.linkedin.com/posts/tanayhingane_introducing-smartbalance-an-expense-activity-7324033153298219008-maqU?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFfxrR4Bjki8u-v0Y7BHCNZSg-IcjnPE2pY"
           target="_blank"
@@ -28,7 +28,7 @@ export default function LInCard() {
         >
           <img src="/LIn.png" alt="LinkedIn post screenshot" />
         </a>
-      </div>
+      </div> */}
 
       {/* CTA Button */}
       <a

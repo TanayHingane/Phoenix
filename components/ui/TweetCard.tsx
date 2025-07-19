@@ -7,7 +7,7 @@ import useSound from "use-sound";
 export default function TweetCard() {
   const [play] = useSound("/Discord.mp3", { volume: 0.5 });
   return (
-    <div className="max-w-full h-full w-full p-7 rounded-2xl bg-gray-50 shadow-sm border border-gray-200 text-sm font-sans space-y-4">
+    <div className="pt-9 max-w-full h-full md:h-3/5 w-full p-7 rounded-2xl bg-gray-50 shadow-sm border border-gray-200 text-sm font-sans space-y-6">
       {/* Header */}
       <div className="flex justify-between items-start">
         <div className="font-3xl">
@@ -21,7 +21,7 @@ export default function TweetCard() {
       </div>
 
       {/* Message Card */}
-      <div className="rounded-lg  bg-white  shadow-sm">
+      {/* <div className="rounded-lg  bg-white  shadow-sm">
         <a
           href="https://discord.com/users/1198554997386915880"
           target="_blank"
@@ -33,7 +33,7 @@ export default function TweetCard() {
             className="h-29 w-full rounded-lg"
           />
         </a>
-      </div>
+      </div> */}
 
       {/* CTA Button */}
       <a
