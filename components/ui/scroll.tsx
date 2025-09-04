@@ -14,14 +14,46 @@ const Board = () => {
       content:
         "My Love for travel\nI’m a good designer & a good observer. When I travel, I explore the world, gain new experiences, and document.",
     },
-    { type: "image", src: "/clicks/c1.jpg", text: "Shegoan, Maharashtra" },
-    { type: "image", src: "/clicks/c2.jpg", text: "Aundh, Maharashtra" },
-    { type: "video", src: "/clicks/c3.mp4", text: "Lonavala, Maharashtra" },
-    { type: "video", src: "/clicks/c4.mp4", text: "Ashoka Adventure, Nashik" },
-    { type: "image", src: "/clicks/c5.jpg", text: "Solapur, Maharashtra" },
-    { type: "video", src: "/clicks/c7.mp4", text: "Karad, Maharashtra" },
-    { type: "image", src: "/clicks/c8.jpg", text: "KKWP, Nashik" },
-    { type: "image", src: "/clicks/c9.jpg", text: "Kalaram Temple, Nashik" },
+    {
+      type: "image",
+      src: "https://cdn.jsdelivr.net/gh/TanayHingane/Phoenix/tree/main/public/clicks/c1.jpg",
+      text: "Shegoan, Maharashtra",
+    },
+    {
+      type: "image",
+      src: "https://cdn.jsdelivr.net/gh/TanayHingane/Phoenix/tree/main/public/clicks/c2.jpg",
+      text: "Aundh, Maharashtra",
+    },
+    {
+      type: "video",
+      src: "https://cdn.jsdelivr.net/gh/TanayHingane/Phoenix/tree/main/public/clicks/c3.mp4",
+      text: "Lonavala, Maharashtra",
+    },
+    {
+      type: "video",
+      src: "https://cdn.jsdelivr.net/gh/TanayHingane/Phoenix/tree/main/public/clicks/c4.mp4",
+      text: "Ashoka Adventure, Nashik",
+    },
+    {
+      type: "image",
+      src: "https://cdn.jsdelivr.net/gh/TanayHingane/Phoenix/tree/main/public/clicks/c5.jpg",
+      text: "Solapur, Maharashtra",
+    },
+    {
+      type: "video",
+      src: "https://cdn.jsdelivr.net/gh/TanayHingane/Phoenix/tree/main/public/clicks/c6.mp4",
+      text: "Karad, Maharashtra",
+    },
+    {
+      type: "image",
+      src: "https://cdn.jsdelivr.net/gh/TanayHingane/Phoenix/tree/main/public/clicks/c8.jpg",
+      text: "KKWP, Nashik",
+    },
+    {
+      type: "image",
+      src: "https://cdn.jsdelivr.net/gh/TanayHingane/Phoenix/tree/main/public/clicks/c9.jpg",
+      text: "Kalaram Temple, Nashik",
+    },
     // { type: "image", src: "/clicks/c10.jpg", text: "Pune, Maharashtra" },
   ];
 
