@@ -63,6 +63,8 @@ export default function ChatCard() {
       customReply = "You're welcome! I'm here to help. 👍";
     } else if (inputMessage.toLowerCase().includes("linkedin")) {
       customReply = "Sure! You can DM me on LinkedIn. 😊";
+    } else if (inputMessage.toLowerCase().includes("@gmail.com")) {
+      customReply = "Thanks for sharing your email! I'll reach out soon. 📧";
     } else {
       customReply = "Got it! Send me an mail with more details. 👍";
     }
