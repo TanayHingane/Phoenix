@@ -31,7 +31,7 @@ const Board = () => {
     },
     {
       type: "video",
-      src: "https://cdn.jsdelivr.net/gh/TanayHingane/Phoenix@main/public/clicks/c4.mp4?v=2",
+      src: "https://cdn.jsdelivr.net/gh/TanayHingane/Phoenix@main/public/clicks/c4.mp4?v=1",
       text: "Ashoka Adventure, Nashik",
     },
     {
@@ -41,7 +41,7 @@ const Board = () => {
     },
     {
       type: "video",
-      src: "https://cdn.jsdelivr.net/gh/TanayHingane/Phoenix@main/public/clicks/c6.mp4?v=3",
+      src: "https://cdn.jsdelivr.net/gh/TanayHingane/Phoenix@main/public/clicks/c7.mp4?v=1",
       text: "Karad, Maharashtra",
     },
     {
