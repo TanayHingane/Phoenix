@@ -31,7 +31,7 @@ const Board = () => {
     },
     {
       type: "video",
-      src: "https://cdn.jsdelivr.net/gh/TanayHingane/Phoenix@main/public/clicks/c4.mp4?v=1",
+      src: "https://cdn.jsdelivr.net/gh/TanayHingane/Phoenix@main/public/clicks/c6.mp4?v=1",
       text: "Ashoka Adventure, Nashik",
     },
     {
