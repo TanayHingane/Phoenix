@@ -5,7 +5,11 @@ import Image from "next/image";
 
 export function About() {
   return (
-    <div className="mt-16 md:mt-32" id="contact">
+    <div
+      className="mt-16 md:mt-32"
+      id="contact"
+      onContextMenu={(e) => e.preventDefault()}
+    >
       <BentoGrid className="max-w-4xl mx-7 md:mx-auto md:auto-rows-[20rem] my-7">
         {items.map((item, i) => (
           <BentoGridItem
@@ -32,9 +36,10 @@ const items = [
       <Image
         src={"/tpp.png"}
         alt="TPP"
-        className="object-cover w-full h-[90%] rounded-xl"
+        className="object-cover w-full h-[90%] rounded-xl pointer-events-none"
         width={500}
         height={500}
+        draggable={false}
       />
     ),
     className: "md:col-span-1 md:row-span-2 h-[500px] md:h-[600px]",

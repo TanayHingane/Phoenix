@@ -1,10 +1,11 @@
+"use client";
 // import darkSaasLandingPage from '@/assets/images/dark-saas-landing-page.png';
 // import lightSaasLandingPage from '@/assets/images/light-saas-landing-page.png';
 // import aiStartupLandingPage from '@/assets/images/ai-startup-landing-page.png';
 // import grainImage from "@/assets/images/grain.jpg";
-import SectionHead from "@/components/ui/SectionHead";
 import Card from "@/components/ui/Card";
-import { ArrowRightIcon, CodeXml, CircleCheck } from "lucide-react";
+import SectionHead from "@/components/ui/SectionHead";
+import { ArrowRightIcon, CircleCheck, CodeXml } from "lucide-react";
 import BgAnimateButton from "./ui/bg-animate-button";
 
 const portfolioProjects = [
@@ -72,7 +73,10 @@ export const Projects = () => {
           title="Portfolio Projects"
           description="Check out my portfolio projects"
         />
-        <div className="flex flex-col mt-10 md:mt-20 md:mx-15 gap-20">
+        <div
+          className="flex flex-col mt-10 md:mt-20 md:mx-15 gap-20"
+          onContextMenu={(e) => e.preventDefault()}
+        >
           {portfolioProjects.map((project, projectIndex) => (
             <Card
               className="px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:px-20 lg:pt-16 sticky"
@@ -144,7 +148,8 @@ export const Projects = () => {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="mt-8 -mb-2 md:mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none rounded-lg"
+                    className="mt-8 -mb-2 md:mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none rounded-lg pointer-events-none"
+                    draggable={false}
                   />
                 </div>
               </div>

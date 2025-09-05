@@ -58,7 +58,10 @@ const Board = () => {
   ];
 
   return (
-    <div className="relative px-4 md:-mt-28 max-w-2xl mx-4 md:mx-auto">
+    <div
+      className="relative px-4 md:-mt-28 max-w-2xl mx-4 md:mx-auto"
+      onContextMenu={(e) => e.preventDefault()}
+    >
       <SectionHeader title="My Clicks" description="Watch my clicks :)" />
       <CustomCursor visible={cursorVisible} text={cursorText} />
 
@@ -92,7 +95,7 @@ const Board = () => {
                 alt={`Image ${index}`}
                 width={400}
                 height={300}
-                className="w-full rounded-lg shadow"
+                className="w-full rounded-lg shadow pointer-events-none"
                 loading="lazy"
                 onMouseEnter={() => {
                   setCursorText(item.text!);
@@ -101,10 +104,11 @@ const Board = () => {
                 onMouseLeave={() => {
                   setCursorVisible(false);
                 }}
+                draggable={false}
               />
             ) : (
               <video
-                className="w-full rounded-lg shadow"
+                className="w-full rounded-lg shadow pointer-events-none"
                 autoPlay
                 loop
                 muted
@@ -116,6 +120,7 @@ const Board = () => {
                 onMouseLeave={() => {
                   setCursorVisible(false);
                 }}
+                draggable={false}
               >
                 <source src={item.src} type="video/mp4" />
                 Your browser does not support the video tag.

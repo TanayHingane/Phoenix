@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { NameCard, ProjectCard } from "./ui/namecard";
 
@@ -22,11 +23,16 @@ const Hero = () => {
           </div>
 
           {/* 2ndDiv */}
-          <div className="shadow-md items-center justify-center w-[220] h-[270] rounded-xl">
+          <div
+            className="shadow-md items-center justify-center w-[220] h-[270] rounded-xl"
+            onContextMenu={(e) => e.preventDefault()}
+          >
             <a href="/about">
               <img
                 src={"tp.jpg"}
                 className="object-cover w-full h-full rounded-xl"
+                alt="Tanay Hingane"
+                draggable={false}
               ></img>
             </a>
           </div>
