@@ -5,7 +5,7 @@ import { NameCard, ProjectCard } from "./ui/namecard";
 const Hero = () => {
   return (
     <div className="flex flex-col justify-center items-center">
-      <div className="bg-gradient-to-r from-pink-100 to-cyan-100 mt-20 md:mt-28 gap-7 md:gap-10 mb-20 md:mb-4 rounded-2xl flex flex-col justify-center items-center h-[500px] md:h-[700px] max-w-[1000] max-h-[600px] min-w-full">
+      <div className="bg-gradient-to-r from-pink-100 to-cyan-100 mt-20 md:mt-28 gap-7 md:gap-10 mb-20 md:mb-4 rounded-2xl flex flex-col justify-center items-center h-[500px] md:h-[700px] max-w-[1000] max-h-[600px] min-w-[350px] md:min-w-7xl">
         <div className=" mb-2 mx-5 justify-center items-center flex flex-col">
           <h1 className="text-lg md:text-5xl font-sans font-light text-black font-stretch-condensed">
             Build Awesome Websites with
@@ -29,7 +29,7 @@ const Hero = () => {
           >
             <a href="/about">
               <img
-                src={"tp.jpg"}
+                src={"tpf.jpg"}
                 className="object-cover w-full h-full rounded-xl"
                 alt="Tanay Hingane"
                 draggable={false}

@@ -21,7 +21,7 @@ export const NameCard = () => {
       {/* Relocation Status */}
       <div className="flex items-center mt-20 gap-2 text-sm justify-start font-medium text-gray-800">
         <span className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
-        Open to internships
+        Open to Internships
       </div>
     </div>
   );
@@ -51,7 +51,7 @@ export const ProjectCard = () => {
         <h1 className="text-2xl font-sans font-semibold text-gray-900 leading-tight">
           Recent
         </h1>
-        <p className="text-base text-gray-500 leading-tight">Budget Tracker</p>
+        <p className="text-base text-gray-500 leading-tight">SafeBeam03</p>
       </div>
 
       {/* Relocation Status */}

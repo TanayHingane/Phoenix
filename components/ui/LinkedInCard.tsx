@@ -40,7 +40,7 @@ export default function LInCard() {
           className="cursor-pointer w-full flex items-center justify-center border border-gray-300 py-2 rounded-full hover:bg-blue-500 hover:text-white transition"
           onMouseEnter={() => play()}
         >
-          <span className="text-sm font-medium">DM ME</span>
+          <span className="text-sm font-medium">Connect ME</span>
           <ArrowRight className="w-4 h-4 ml-2" />
         </button>
       </a>

@@ -67,19 +67,22 @@ const portfolioProjects = [
 
 export const Projects = () => {
   return (
-    <section className="pb-16 lg:py-24" id="projects">
+    <section
+      className="pb-16 lg:py-24 flex flex-col items-center justify-center"
+      id="projects"
+    >
       <div className="container">
         <SectionHead
           title="Portfolio Projects"
           description="Check out my portfolio projects"
         />
         <div
-          className="flex flex-col mt-10 md:mt-20 md:mx-15 gap-20"
+          className="flex flex-col mt-10 md:mt-20 md:mx-15 gap-20 items-center justify-center relative"
           onContextMenu={(e) => e.preventDefault()}
         >
           {portfolioProjects.map((project, projectIndex) => (
             <Card
-              className="px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:px-20 lg:pt-16 sticky"
+              className="px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:px-20 lg:pt-16 sticky max-w-[1000] md:min-w-7xl"
               key={project.title}
               style={{
                 top: `calc(64px + ${projectIndex * 50}px)`,
