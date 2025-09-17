@@ -47,26 +47,20 @@ export default function ChatCard() {
       inputMessage.toLowerCase().includes("yes")
     ) {
       customReply = "Okay, Contact me through mail! I'll help 📧";
-    } else if (inputMessage.toLowerCase().includes("website")) {
-      customReply = "Great! Let's connect through mail. 😊";
-    } else if (
-      inputMessage.toLowerCase().includes("hi") ||
-      inputMessage.toLowerCase().includes("hello")
-    ) {
-      customReply = "Hello! How can I assist you today? 😊";
-    } else if (
-      inputMessage.toLowerCase().includes("bye") ||
-      inputMessage.toLowerCase().includes("goodbye")
-    ) {
-      customReply = "Goodbye! Feel free to reach out anytime. 👋";
-    } else if (inputMessage.toLowerCase().includes("thank")) {
-      customReply = "You're welcome! I'm here to help. 👍";
-    } else if (inputMessage.toLowerCase().includes("linkedin")) {
-      customReply = "Sure! You can DM me on LinkedIn. 😊";
     } else if (inputMessage.toLowerCase().includes("@gmail.com")) {
-      customReply = "Thanks for sharing your email! I'll reach out soon. 📧";
+      customReply = "Thanks for reaching out! I'll get back to you shortly. 😊";
+    } else if (
+      inputMessage.toLowerCase().includes("urgent") ||
+      inputMessage.toLowerCase().includes("asap") ||
+      inputMessage.toLowerCase().includes("quick") ||
+      inputMessage.toLowerCase().includes("immediate") ||
+      inputMessage.toLowerCase().includes("now") ||
+      inputMessage.toLowerCase().includes("fast")
+    ) {
+      customReply =
+        "I understand! Contact me through mail and I'll prioritize your request. 🚀";
     } else {
-      customReply = "Got it! Send me an mail with more details. 👍";
+      customReply = "Please enter a valid email address.";
     }
 
     setTimeout(() => {
@@ -144,7 +138,7 @@ export default function ChatCard() {
         </div>
         <div className="flex-grow mx-4 relative">
           <input
-            type="text"
+            type="email"
             placeholder="iMessage"
             className="w-full rounded-full border border-gray-300 px-4 py-2 pl-4 pr-10 text-sm text-gray-800 focus:outline-none"
             value={inputMessage}
