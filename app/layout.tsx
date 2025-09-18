@@ -60,6 +60,10 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="google-site-verification"
+          content="BbWKkb9nYRja3XHwtN7JOnQmxh4AQo1Rea5eWW1Zueo"
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${eduAUVICWA.variable} ${eduAUVICWAPre.variable} antialiased`}
