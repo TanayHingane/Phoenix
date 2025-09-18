@@ -48,6 +48,12 @@ export const metadata: Metadata = {
     "TypeScript",
     "portfolio",
     "Tanay Hingane",
+    "Tanay Hingane portfolio",
+    "Tanay Hingane developer",
+    "Tanay Hingane 03",
+    "tanayhingane03",
+    "tanayhingane",
+    "hingane",
   ],
   authors: [
     { name: "Tanay Hingane", url: "https://tanayhingane03.vercel.app/" },
