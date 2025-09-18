@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tanayhingane03.vercel.app//sitemap.xml

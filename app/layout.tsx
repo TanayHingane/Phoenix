@@ -38,8 +38,44 @@ const eduAUVICWAPre = Edu_AU_VIC_WA_NT_Pre({
 });
 
 export const metadata: Metadata = {
-  title: "Tanay Hingane",
-  description: "Tanay Hingane's Portfolio",
+  title: "Tanay Hingane - Full Stack Developer",
+  description:
+    "Portfolio of Tanay Hingane, a full-stack developer specializing in Next.js, React, and TypeScript.",
+  keywords: [
+    "full stack developer",
+    "Next.js",
+    "React",
+    "TypeScript",
+    "portfolio",
+    "Tanay Hingane",
+  ],
+  authors: [
+    { name: "Tanay Hingane", url: "https://tanayhingane03.vercel.app/" },
+  ],
+  openGraph: {
+    title: "Tanay Hingane - Full Stack Developer",
+    description:
+      "Portfolio of Tanay Hingane, a full-stack developer specializing in Next.js, React, and TypeScript.",
+    url: "https://tanayhingane03.vercel.app/",
+    siteName: "Tanay Hingane's Portfolio",
+    images: [
+      {
+        url: "https://tanayhingane03.vercel.app/tppp.jpg", // Must be an absolute URL
+        width: 1200,
+        height: 630,
+        alt: "Tanay Hingane's Portfolio",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tanay Hingane - Full Stack Developer",
+    description:
+      "Portfolio of Tanay Hingane, a full-stack developer specializing in Next.js, React, and TypeScript.",
+    images: ["https://tanayhingane03.vercel.app/tpp.jpg"], // Must be an absolute URL
+  },
   icons: {
     icon: "/favicon.ico",
   },
@@ -74,5 +110,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-//mantine mage react-together
