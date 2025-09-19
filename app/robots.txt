@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
 Sitemap: https://tanayhingane03.vercel.app//sitemap.xml
+Sitemap: https://tanayhingane03.vercel.app/image-sitemap.xml
