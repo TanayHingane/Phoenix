@@ -29,7 +29,7 @@ const Hero = () => {
           >
             <a href="/about">
               <img
-                src={"tpf.jpg"}
+                src={"tppp.jpg"}
                 className="object-cover w-full h-full rounded-xl"
                 alt="Tanay Hingane"
                 draggable={false}
