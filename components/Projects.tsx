@@ -110,11 +110,23 @@ export const Projects = () => {
                       </li>
                     ))}
                   </ul>
-                  <div className="flex flex-col md:flex-row gap-3 w-full text-white">
+                  <div className="flex flex-col md:flex-row md:gap-3 w-full text-white">
                     <a href={project.link} target="_blank">
-                      <button className="bg-gradient-to-r from-sky-400 to-emerald-400 text-white h-12 w-full md:w-auto px-5 rounded-xl font-semibold sm:hidden block items-center justify-center gap-2 mt-8">
+                      {/* <button className="bg-gradient-to-r from-sky-400 to-emerald-400 text-white h-12 w-full md:w-auto px-5 rounded-xl font-semibold sm:hidden block items-center justify-center gap-2 mt-8">
                         <span>Live Site</span>
-                      </button>
+                      </button> */}
+                      <BgAnimateButton
+                        animation="spin-slow"
+                        className="text-white font-semibold sm:hidden block items-center justify-center gap-2 mt-8 cursor-pointer w-full"
+                        rounded="sm"
+                        variant="secondary"
+                        gradient="ocean"
+                      >
+                        <span className="inline-flex">
+                          Live Site
+                          <ArrowRightIcon className="size-3 -rotate-45" />
+                        </span>
+                      </BgAnimateButton>
                       <BgAnimateButton
                         animation="spin-fast"
                         className="text-white font-semibold hidden sm:block items-center justify-center gap-2 mt-8 cursor-pointer"
@@ -129,9 +141,21 @@ export const Projects = () => {
                       </BgAnimateButton>
                     </a>
                     <a href={project.src} target="_blank">
-                      <button className="bg-gradient-to-r from-sky-400 to-emerald-400 text-white rounded-xl h-12 w-full md:w-auto px-5 font-semibold sm:hidden block items-center justify-center gap-2 md:mt-8">
+                      {/* <button className="bg-gradient-to-r from-sky-400 to-emerald-400 text-white rounded-xl h-12 w-full md:w-auto px-5 font-semibold sm:hidden block items-center justify-center gap-2 md:mt-8">
                         <span>Code</span>
-                      </button>
+                      </button> */}
+                      <BgAnimateButton
+                        animation="spin-slow"
+                        className="text-white font-semibold sm:hidden block items-center justify-center gap-2 mt-8 cursor-pointer w-full"
+                        rounded="sm"
+                        variant="secondary"
+                        gradient="ocean"
+                      >
+                        <span className="inline-flex">
+                          Code
+                          <CodeXml className="size-4" />
+                        </span>
+                      </BgAnimateButton>
                       <BgAnimateButton
                         animation="spin-fast"
                         className="text-white font-semibold hidden sm:block items-center justify-center gap-2 mt-8 cursor-pointer"
