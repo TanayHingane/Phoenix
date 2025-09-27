@@ -29,7 +29,7 @@ const items = [
     // title: "The Dawn of Innovation",
     // description: "Explore the birth of groundbreaking ideas and inventions.",
     header: <ChatCard />,
-    className: "md:col-span-2",
+    className: "md:col-span-2 hidden md:block",
     // icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
   },
   {

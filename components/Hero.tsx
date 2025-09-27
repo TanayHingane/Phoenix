@@ -4,19 +4,30 @@ import { NameCard, ProjectCard } from "./ui/namecard";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col justify-center items-center">
-      <div className="bg-gradient-to-r from-pink-100 to-cyan-100 mt-20 md:mt-28 gap-7 md:gap-10 mb-20 md:mb-4 rounded-2xl flex flex-col justify-center items-center h-[500px] md:h-[700px] max-w-[1000] max-h-[600px] min-w-[350px] md:min-w-7xl">
+    <div className="flex flex-col justify-center items-center mt-5 md:mt-0">
+      <div className="bg-gradient-to-r from-pink-100 to-cyan-100 mt-20 md:mt-28 gap-7 md:gap-10 mb-20 md:mb-4 rounded-2xl flex flex-col justify-center items-center h-[300px] md:h-[700px] max-w-[1000] max-h-[600px] min-w-[350px] md:min-w-7xl mx-7 md:mx-0">
         <div className=" mb-2 mx-5 justify-center items-center flex flex-col">
-          <h1 className="text-lg md:text-5xl font-sans font-light text-black font-stretch-condensed">
+          <h1 className="text-lg md:text-5xl hidden sm:block font-sans font-light text-black font-stretch-condensed">
             Build Awesome Websites with
           </h1>
-          <h1 className="text-base md:text-5xl font-pre  text-blue-500">
+          <h1 className="text-base hidden sm:block md:text-5xl font-pre  text-blue-500">
             Tanay Hingane
           </h1>
+          <h1 className="text-lg md:text-5xl md:hidden block font-sans font-light text-black font-stretch-condensed">
+            Hey there! I'm{" "}
+            <span className="text-blue-500 font-pre">Tanay Hingane</span>
+          </h1>
+          <h1 className="text-sm md:text-2xl font-sans font-light text-black text-center mt-3 md:hidden block">
+            Full Stack Developer
+          </h1>
+          <h1 className="text-xs md:text-2xl font-sans font-light text-black text-center mt-3 md:hidden block">
+            I Specialize in creating high performance and user-friendly web
+            applications. Lets build something great together
+          </h1>
         </div>
-        <div className="mt-3 mb-3 grid grid-cols-1 md:grid-cols-3 gap-7 mx-3 h-[190] hover:cursor-pointer">
+        <div className="mt-3 mb-3 sm:block hidden md:grid grid-cols-1 md:grid-cols-3 gap-7 mx-3 h-[190] hover:cursor-pointer">
           {/* 1stDiv */}
-          <div className="bg-white hidden sm:block md:w-[220] md:h-[270] rounded-xl">
+          <div className="bg-white sm:block hidden md:w-[220] md:h-[270] rounded-xl">
             <a href="#contact">
               <NameCard />
             </a>
@@ -24,7 +35,7 @@ const Hero = () => {
 
           {/* 2ndDiv */}
           <div
-            className="shadow-md items-center justify-center w-[220] h-[270] rounded-xl"
+            className="shadow-md items-center sm:block hidden justify-center w-[220] h-[270] rounded-xl"
             onContextMenu={(e) => e.preventDefault()}
           >
             <a href="/about">

@@ -64,7 +64,7 @@ export const FloatingNav = ({
         )}
       >
         {/* {logo} */}
-        <div className="fixed flex -left-4 md:-left-14 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/90 md:bg-white/70 backdrop-blur-3xl cursor-pointer border shadow items-center justify-center">
+        <div className="fixed flex -left-6 md:-left-14 w-12 h-12 md:w-12 md:h-12 rounded-full bg-white/90 md:bg-white/70 backdrop-blur-3xl cursor-pointer border shadow items-center justify-center">
           {/* <a href="/"> */}
           <span
             className="text-blue-600 font-bold text-sm md:text-2xl"
@@ -79,7 +79,9 @@ export const FloatingNav = ({
           <a
             key={`link=${idx}`}
             href={navItem.link}
-            className={cn("relative text-black items-center flex space-x-1")}
+            className={cn(
+              "relative text-black items-center flex space-x-1 pl-2 md:pl-0"
+            )}
           >
             <span className="block sm:block ">{navItem.icon}</span>
             <span className="text-xs md:text-base">{navItem.name}</span>

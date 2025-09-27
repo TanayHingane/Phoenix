@@ -106,6 +106,20 @@ export default function RootLayout({
           name="google-site-verification"
           content="BbWKkb9nYRja3XHwtN7JOnQmxh4AQo1Rea5eWW1Zueo"
         />
+        <style>
+          {`
+            img, video {
+              user-select: none;
+              -webkit-user-drag: none;
+              pointer-events: none;
+            }
+            body {
+              -webkit-user-select: none; /* Safari */
+              -ms-user-select: none; /* IE 10 and IE 11 */
+              user-select: none; /* Standard syntax */
+            }
+          `}
+        </style>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${eduAUVICWA.variable} ${eduAUVICWAPre.variable} antialiased`}

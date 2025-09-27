@@ -3,7 +3,7 @@ import { About } from "@/components/About";
 import { Footer } from "@/components/ui/Footer";
 import React, { Suspense } from "react";
 import dynamic from "next/dynamic";
-const Board = dynamic(() => import("@/components/ui/scroll"), { ssr: false });
+import Bookshelf from "@/components/Books";
 
 const page = () => {
   return (
@@ -12,7 +12,8 @@ const page = () => {
         <About />
       </div>
       <Suspense fallback={<div>Loading gallery...</div>}>
-        <Board />
+        {/* <Board /> */}
+        <Bookshelf />
       </Suspense>
 
       <div className="p-5 px-5 md:px-44 bg-white">
