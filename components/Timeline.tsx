@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import SectionHeader from "./ui/SectionHead";
 import { Modal } from "./ui/Modal";
+import { Dialog, DialogContent, DialogTrigger } from "./ui/dialog";
 
 // 1. TYPE DEFINITION FOR A TIMELINE EVENT
 interface TimelineEvent {
@@ -98,22 +99,56 @@ export const Timeline: React.FC = () => {
                     {event.institution}
                   </p>
                   <p className="mt-2 text-slate-600">{event.description}</p>
-                  <div className="mt-4">
+                  <div className="mt-4 flex flex-col sm:flex-row sm:items-center sm:space-x-1 space-y-2 sm:space-y-0">
                     {event.primaryButton && (
-                      <button
-                        onClick={() => openModal(event.primaryButton!.images)}
-                        className="inline-block rounded bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700"
-                      >
-                        {event.primaryButton.text}
-                      </button>
+                      <Dialog>
+                        <DialogTrigger asChild>
+                          <button className="inline-block rounded bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700">
+                            {event.primaryButton.text}
+                          </button>
+                        </DialogTrigger>
+                        <DialogContent>
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            {event.primaryButton.images.map((src, idx) => (
+                              <img
+                                key={idx}
+                                src={src}
+                                alt={`Modal image ${idx + 1}`}
+                                className={`w-full h-auto rounded-lg object-contain ${
+                                  event.primaryButton!.images.length === 1
+                                    ? "md:col-span-2"
+                                    : ""
+                                }`}
+                              />
+                            ))}
+                          </div>
+                        </DialogContent>
+                      </Dialog>
                     )}
                     {event.secondaryButton && (
-                      <button
-                        onClick={() => openModal(event.secondaryButton!.images)}
-                        className="ml-2 inline-block rounded border border-blue-600 px-4 py-2 text-sm font-semibold text-blue-600 hover:bg-blue-50"
-                      >
-                        {event.secondaryButton.text}
-                      </button>
+                      <Dialog>
+                        <DialogTrigger asChild>
+                          <button className="md:ml-2 ml-0 inline-block rounded border border-blue-600 px-4 py-2 text-sm font-semibold text-blue-600 hover:bg-blue-50 ">
+                            {event.secondaryButton.text}
+                          </button>
+                        </DialogTrigger>
+                        <DialogContent>
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            {event.secondaryButton.images.map((src, idx) => (
+                              <img
+                                key={idx}
+                                src={src}
+                                alt={`Modal image ${idx + 1}`}
+                                className={`w-full h-auto rounded-lg object-contain ${
+                                  event.secondaryButton!.images.length === 1
+                                    ? "md:col-span-2"
+                                    : ""
+                                }`}
+                              />
+                            ))}
+                          </div>
+                        </DialogContent>
+                      </Dialog>
                     )}
                   </div>
                 </div>
